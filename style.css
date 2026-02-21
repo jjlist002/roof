@@ -20,7 +20,7 @@
   --serif:'Cormorant Garamond','Noto Sans KR',serif;
 }
 
-html{scroll-behavior:smooth}
+html{scroll-behavior:auto}
 body{
   font-family:var(--sans);
   background:var(--bg);
@@ -107,7 +107,7 @@ em{font-style:normal;color:var(--amber)}
 /* ---- Hero ---- */
 .hero{
   position:relative;
-  height:100vh;height:100dvh;
+  height:100vh;height:100svh;
   display:flex;align-items:center;justify-content:center;
   text-align:center;
   overflow:hidden;
