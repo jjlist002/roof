@@ -16,8 +16,8 @@
   --muted:#5D5750;
   --line:rgba(240,235,227,.07);
   --line-h:rgba(232,168,73,.22);
-  --sans:'Outfit','Noto Sans KR',sans-serif;
-  --serif:'Noto Serif KR','Georgia',serif;
+  --sans:'Inter','Noto Sans KR',sans-serif;
+  --serif:'Cormorant Garamond','Noto Sans KR',serif;
 }
 
 html{scroll-behavior:smooth}
@@ -77,8 +77,10 @@ em{font-style:normal;color:var(--amber)}
 }
 
 .nav-logo{
-  display:flex;flex-direction:column;text-decoration:none;line-height:1.15;
+  display:flex;align-items:center;gap:10px;text-decoration:none;line-height:1.15;
 }
+.nav-logo-icon{flex-shrink:0}
+.nav-logo-text{display:flex;flex-direction:column}
 .nav-logo-kr{
   font-family:var(--serif);font-size:1.05rem;font-weight:700;color:var(--white);
 }
@@ -122,6 +124,14 @@ em{font-style:normal;color:var(--amber)}
   position:absolute;inset:0;
   background:rgba(11,11,11,.65);
 }
+.hero-dim::after{
+  content:'';position:absolute;inset:0;
+  opacity:.03;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' fill='none' stroke='%23E8A849' stroke-width='.4'%3E%3Cpath d='M60 360 L300 100 L540 360'/%3E%3Cline x1='40' y1='360' x2='560' y2='360'/%3E%3Cline x1='300' y1='100' x2='300' y2='360'/%3E%3Cpath d='M180 230 L180 360 M420 230 L420 360' stroke-dasharray='4 4'/%3E%3Crect x='230' y='260' width='60' height='100' stroke-dasharray='3 3'/%3E%3Crect x='310' y='260' width='60' height='100' stroke-dasharray='3 3'/%3E%3Ccircle cx='50' cy='50' r='20' stroke-dasharray='2 2'/%3E%3Cline x1='30' y1='50' x2='70' y2='50' stroke-dasharray='2 2'/%3E%3Cline x1='50' y1='30' x2='50' y2='70' stroke-dasharray='2 2'/%3E%3C/svg%3E");
+  background-size:600px 400px;
+  background-repeat:repeat;
+}
 
 .hero-inner{
   position:relative;z-index:2;
@@ -129,6 +139,7 @@ em{font-style:normal;color:var(--amber)}
 }
 
 /* Logo Block */
+.hero-logo-icon{display:block;margin:0 auto 16px}
 .hero-logo-block{
   margin-bottom:32px;
 }
@@ -196,8 +207,19 @@ em{font-style:normal;color:var(--amber)}
 .scroll-bar{width:1px;height:32px;background:linear-gradient(180deg,var(--amber),transparent);animation:scrollPulse 2s ease-in-out infinite}
 @keyframes scrollPulse{0%,100%{opacity:0;transform:scaleY(0)}50%{opacity:1;transform:scaleY(1)}}
 
-/* ---- Sections ---- */
-.sec{padding:100px 0}
+/* ---- Architectural Sketch Background ---- */
+.sec{
+  padding:100px 0;
+  position:relative;
+}
+.sec::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  opacity:.025;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' fill='none' stroke='%23E8A849' stroke-width='.5'%3E%3Cpath d='M40 260 L200 80 L360 260'/%3E%3Cline x1='20' y1='260' x2='380' y2='260'/%3E%3Cline x1='200' y1='80' x2='200' y2='260'/%3E%3Cline x1='120' y1='170' x2='120' y2='260'/%3E%3Cline x1='280' y1='170' x2='280' y2='260'/%3E%3Crect x='150' y='200' width='40' height='60'/%3E%3Crect x='210' y='200' width='40' height='60'/%3E%3Crect x='100' y='190' width='25' height='25'/%3E%3Crect x='275' y='190' width='25' height='25'/%3E%3Cpath d='M50 290 L50 250 M70 290 L70 250' stroke-dasharray='3 3'/%3E%3Cline x1='30' y1='280' x2='370' y2='280' stroke-dasharray='5 5'/%3E%3C/svg%3E");
+  background-size:400px 300px;
+  background-repeat:repeat;
+}
 .sec-alt{background:var(--bg2)}
 
 .sec-label{

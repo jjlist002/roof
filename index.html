@@ -12,7 +12,7 @@
   <meta property="og:locale" content="ko_KR" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif+KR:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="/style.css" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='2' fill='%23111'/%3E%3Cpath d='M6 22 L16 10 L26 22' stroke='%23E8A849' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cline x1='4' y1='22' x2='28' y2='22' stroke='%23E8A849' stroke-width='2'/%3E%3C/svg%3E" />
   <script type="application/ld+json">
@@ -34,8 +34,15 @@
   <!-- Nav -->
   <nav class="nav" id="nav">
     <a href="#" class="nav-logo">
-      <span class="nav-logo-kr">천일지붕</span>
-      <span class="nav-logo-en">CHUNIL ROOF</span>
+      <svg class="nav-logo-icon" viewBox="0 0 40 32" width="32" height="26">
+        <path d="M4 26 L20 6 L36 26" stroke="var(--amber)" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="2" y1="26" x2="38" y2="26" stroke="var(--amber)" stroke-width="2.2" stroke-linecap="round"/>
+        <line x1="20" y1="6" x2="20" y2="26" stroke="var(--amber)" stroke-width="1.2" opacity=".3"/>
+      </svg>
+      <div class="nav-logo-text">
+        <span class="nav-logo-kr">천일지붕</span>
+        <span class="nav-logo-en">CHUNIL ROOF</span>
+      </div>
     </a>
     <button class="hamburger" id="hamburger" aria-label="메뉴">
       <span></span><span></span>
@@ -58,6 +65,13 @@
     <div class="hero-dim"></div>
     <div class="hero-inner">
       <div class="hero-logo-block">
+        <svg class="hero-logo-icon" viewBox="0 0 80 60" width="80" height="60">
+          <path d="M8 50 L40 10 L72 50" stroke="var(--amber)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="4" y1="50" x2="76" y2="50" stroke="var(--amber)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="40" y1="10" x2="40" y2="50" stroke="var(--amber)" stroke-width="1" opacity=".25"/>
+          <line x1="24" y1="30" x2="24" y2="50" stroke="var(--amber)" stroke-width="1" opacity=".15"/>
+          <line x1="56" y1="30" x2="56" y2="50" stroke="var(--amber)" stroke-width="1" opacity=".15"/>
+        </svg>
         <div class="hero-logo-line"></div>
         <p class="hero-logo-label">CHUNIL ROOF</p>
         <h1 class="hero-logo-title">천일지붕</h1>
@@ -87,10 +101,10 @@
       <div class="sec-label">ABOUT US</div>
       <div class="about-layout">
         <div class="about-left">
-          <h2>千日의 기술력,<br>변하지 않는 <em>신뢰</em></h2>
-          <p class="about-lead">천일지붕은 2004년부터 오직 지붕과 외관 리모델링만을 전문으로 해온 시공 전문업체입니다.</p>
+          <h2>천일(千日)의 기술,<br>한결같은 <em>신뢰</em></h2>
         </div>
         <div class="about-right">
+          <p class="about-lead">천일지붕은 2004년부터 주택, 상가, 건물의 지붕과 외관 리모델링만을 전문으로 해온 시공 전문업체입니다.</p>
           <p>단순한 공사가 아닌, 건축의 아름다움과 기술력을 결합한 시공을 추구합니다. 500건이 넘는 시공 경험에서 쌓아온 노하우로, 건물의 가치를 높이는 최적의 솔루션을 제공합니다.</p>
           <div class="about-points">
             <div class="about-point">
