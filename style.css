@@ -1290,109 +1290,170 @@ body {
     padding: 0 20px;
   }
 
-  /* --- Mobile Nav: 완전 불투명 배경 --- */
-  .nav-toggle { display: flex; }
+  /* --- Mobile Nav 높이 축소 --- */
+  .nav-inner {
+    height: 56px;
+    padding: 0 16px;
+  }
 
+  .nav-logo {
+    gap: 8px;
+  }
+
+  .logo-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .logo-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .logo-en {
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+  }
+
+  .logo-kr {
+    font-size: 0.55rem;
+    letter-spacing: 2px;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* --- Mobile Menu: 완전 불투명, 내용 보이게 --- */
   .nav-links {
+    display: none;
     position: fixed;
-    top: 72px;
+    top: 56px;
     left: 0;
     right: 0;
     bottom: 0;
     flex-direction: column;
+    align-items: stretch;
     background: #0a0c10;
-    padding: 24px 20px;
+    padding: 16px 0;
     gap: 0;
-    transform: translateX(100%);
-    transition: transform 0.3s;
     overflow-y: auto;
-    z-index: 999;
+    z-index: 9999;
+    list-style: none;
   }
 
   .nav-links.open {
-    transform: translateX(0);
+    display: flex;
   }
 
   .nav-links li {
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid rgba(245, 240, 232, 0.08);
   }
 
   .nav-links li:last-child {
     border-bottom: none;
+    padding: 16px 20px;
   }
 
   .nav-links a {
-    font-size: 1rem;
-    padding: 16px 12px;
     display: block;
-    text-align: center;
+    padding: 18px 24px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #F5F0E8;
+    text-align: left;
+    text-decoration: none;
     border-bottom: none;
   }
 
-  .nav-cta {
-    margin-top: 12px;
-    justify-content: center;
-    padding: 14px !important;
+  .nav-links a:hover,
+  .nav-links a:active {
+    color: var(--accent);
+    background: rgba(201, 169, 110, 0.08);
   }
 
-  /* --- Hero 모바일 --- */
+  .nav-cta {
+    display: flex !important;
+    justify-content: center;
+    width: 100%;
+    padding: 16px !important;
+    border-radius: 4px;
+    font-size: 1rem !important;
+  }
+
+  /* --- Hero: 네비 높이 고려, 로고부터 보이게 --- */
+  .hero {
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding-top: 56px;
+  }
+
   .hero-content {
     padding: 0 20px;
   }
 
+  .hero-logo {
+    margin-bottom: 16px;
+  }
+
   .hero-logo svg {
-    width: 56px;
-    height: 56px;
+    width: 48px;
+    height: 48px;
   }
 
   .hero-badge {
-    font-size: 0.65rem;
-    padding: 6px 16px;
+    font-size: 0.6rem;
+    padding: 5px 14px;
     letter-spacing: 1.5px;
+    margin-bottom: 20px;
   }
 
   .hero-title {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+    margin-bottom: 16px;
   }
 
   .hero-company {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     letter-spacing: 3px;
+    margin-bottom: 12px;
   }
 
   .hero-subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 32px;
+    font-size: 0.9rem;
+    margin-bottom: 28px;
+    line-height: 1.7;
   }
 
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
-    margin-bottom: 48px;
+    margin-bottom: 40px;
+    gap: 12px;
   }
 
   .hero-actions .btn {
     justify-content: center;
-    padding: 14px 24px;
+    padding: 13px 24px;
     font-size: 0.9rem;
   }
 
   .hero-stats {
     gap: 24px;
     flex-wrap: nowrap;
-    padding-top: 32px;
+    padding-top: 28px;
   }
 
   .stat-number {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   .stat-suffix {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .stat-label {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
   }
 
   .hero-scroll { display: none; }
@@ -1459,21 +1520,20 @@ body {
     gap: 6px;
   }
 
-  /* --- Portfolio 필터: 1줄 유지 --- */
+  /* --- Portfolio 필터: 화면 안에서 자동 조정 --- */
   .portfolio-filter {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 6px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 4px;
-    justify-content: flex-start;
+    padding: 0;
   }
 
   .filter-btn {
-    padding: 8px 14px;
-    font-size: 0.75rem;
+    padding: 8px 4px;
+    font-size: 0.7rem;
     white-space: nowrap;
-    flex-shrink: 0;
+    text-align: center;
+    letter-spacing: 0;
   }
 
   .portfolio-grid {
@@ -1497,10 +1557,10 @@ body {
     font-size: 0.6rem;
   }
 
-  /* --- Portfolio CTA 버튼: 2줄 방지 --- */
+  /* --- Portfolio CTA 버튼 --- */
   .portfolio-cta .btn {
-    font-size: 0.8rem;
-    padding: 12px 20px;
+    font-size: 0.78rem;
+    padding: 12px 16px;
     gap: 6px;
   }
 
@@ -1554,7 +1614,7 @@ body {
   .form-group input,
   .form-group select,
   .form-group textarea {
-    font-size: 0.85rem;
+    font-size: 16px;
     padding: 10px 14px;
   }
 
@@ -1602,22 +1662,26 @@ body {
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 1.55rem;
+    font-size: 1.5rem;
   }
 
   .hero-badge {
-    font-size: 0.6rem;
+    font-size: 0.55rem;
     letter-spacing: 1px;
-    padding: 5px 12px;
+    padding: 5px 10px;
   }
 
   .hero-company {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     letter-spacing: 2px;
   }
 
+  .hero-subtitle {
+    font-size: 0.85rem;
+  }
+
   .section-title {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
   }
 
   .section-desc {
@@ -1628,9 +1692,14 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .filter-btn {
+    padding: 7px 2px;
+    font-size: 0.62rem;
+  }
+
   .portfolio-cta .btn {
-    font-size: 0.75rem;
-    padding: 10px 16px;
+    font-size: 0.72rem;
+    padding: 10px 14px;
   }
 
   .btn {
@@ -1644,5 +1713,13 @@ body {
 
   .feature {
     padding: 12px;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .hero-stats {
+    gap: 16px;
   }
 }
