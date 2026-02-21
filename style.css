@@ -17,25 +17,25 @@
   --bg-card: #161b24;
   --bg-card-hover: #1c2230;
 
-  /* Blueprint accent */
-  --accent: #00d4ff;
-  --accent-dim: #0098b8;
-  --accent-glow: rgba(0, 212, 255, 0.15);
-  --accent-glow-strong: rgba(0, 212, 255, 0.3);
+  /* Warm Gold accent */
+  --accent: #C9A96E;
+  --accent-dim: #A8874D;
+  --accent-glow: rgba(201, 169, 110, 0.15);
+  --accent-glow-strong: rgba(201, 169, 110, 0.3);
 
   /* Grid lines */
-  --grid-color: rgba(0, 212, 255, 0.04);
-  --grid-color-strong: rgba(0, 212, 255, 0.08);
+  --grid-color: rgba(201, 169, 110, 0.03);
+  --grid-color-strong: rgba(201, 169, 110, 0.06);
 
   /* Text */
-  --text-primary: #e8ecf1;
-  --text-secondary: #8892a4;
-  --text-muted: #505a6e;
-  --text-accent: #00d4ff;
+  --text-primary: #F5F0E8;
+  --text-secondary: #A09882;
+  --text-muted: #6B6354;
+  --text-accent: #C9A96E;
 
   /* Borders */
-  --border: rgba(255, 255, 255, 0.06);
-  --border-accent: rgba(0, 212, 255, 0.2);
+  --border: rgba(245, 240, 232, 0.06);
+  --border-accent: rgba(201, 169, 110, 0.2);
 
   /* Fonts */
   --font-body: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -66,7 +66,7 @@ a {
   text-decoration: none;
   transition: color 0.3s;
 }
-a:hover { color: #fff; }
+a:hover { color: #F5F0E8; }
 
 img { max-width: 100%; display: block; }
 
@@ -99,7 +99,7 @@ img { max-width: 100%; display: block; }
   color: var(--bg-primary);
 }
 .btn-primary:hover {
-  background: #fff;
+  background: #F5F0E8;
   color: var(--bg-primary);
   box-shadow: 0 0 30px var(--accent-glow-strong);
 }
@@ -111,7 +111,7 @@ img { max-width: 100%; display: block; }
 }
 .btn-outline:hover {
   background: var(--accent-glow);
-  color: #fff;
+  color: #F5F0E8;
   border-color: var(--accent);
 }
 
@@ -209,7 +209,7 @@ img { max-width: 100%; display: block; }
   font-family: var(--font-tech);
 }
 .nav-cta:hover {
-  background: #fff !important;
+  background: #F5F0E8 !important;
   color: var(--bg-primary) !important;
 }
 
@@ -265,8 +265,8 @@ img { max-width: 100%; display: block; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(0, 212, 255, 0.08) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 50%, rgba(201, 169, 110, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(201, 169, 110, 0.05) 0%, transparent 50%),
     linear-gradient(180deg, rgba(10,12,16,0.3) 0%, rgba(10,12,16,0.8) 100%);
 }
 
@@ -1096,7 +1096,7 @@ img { max-width: 100%; display: block; }
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.5px;
-  box-shadow: 0 8px 32px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(201, 169, 110, 0.3);
   transition: all 0.3s;
   opacity: 0;
   transform: translateY(20px);
@@ -1108,9 +1108,9 @@ img { max-width: 100%; display: block; }
 }
 
 .floating-cta:hover {
-  background: #fff;
+  background: #F5F0E8;
   color: var(--bg-primary);
-  box-shadow: 0 12px 40px rgba(0, 212, 255, 0.4);
+  box-shadow: 0 12px 40px rgba(201, 169, 110, 0.4);
   transform: translateY(-2px);
 }
 
