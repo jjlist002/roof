@@ -240,6 +240,15 @@ img { max-width: 100%; display: block; }
   background: var(--bg-primary);
 }
 
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.25;
+}
+
 .blueprint-grid {
   position: absolute;
   inset: 0;
@@ -667,24 +676,15 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
 }
 
-.service-placeholder {
+.service-card-image img {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  background:
-    linear-gradient(135deg, var(--bg-tertiary), var(--bg-card));
-  color: var(--text-muted);
-  font-size: 0.8rem;
-  font-family: var(--font-tech);
-  letter-spacing: 1px;
-  border-bottom: 1px solid var(--border);
+  object-fit: cover;
+  transition: transform 0.6s ease;
 }
-.service-placeholder svg {
-  opacity: 0.3;
+
+.service-card:hover .service-card-image img {
+  transform: scale(1.05);
 }
 
 .service-card-content {
@@ -799,20 +799,21 @@ img { max-width: 100%; display: block; }
   display: none;
 }
 
-.portfolio-placeholder {
+.portfolio-image {
   aspect-ratio: 4/3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-card));
-  color: var(--text-muted);
-  font-size: 0.75rem;
-  font-family: var(--font-tech);
-  letter-spacing: 1px;
+  overflow: hidden;
 }
-.ph-icon { opacity: 0.2; }
+
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.portfolio-item:hover .portfolio-image img {
+  transform: scale(1.08);
+}
 
 .portfolio-info {
   padding: 16px 20px;
