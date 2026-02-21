@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>천일지붕 CHUNIL ROOF | 징크 지붕공사 전문 - 세라믹사이딩, 테라코타, 진타맥스</title>
   <meta name="description" content="20년 경력, 500건 이상 시공실적의 지붕 외관 리모델링 전문업체 천일지붕. 징크, 세라믹사이딩, 테라코타, 진타맥스 전문 시공. 무료 상담 010-7270-6053" />
-  <meta name="keywords" content="천일지붕, 지붕공사, 징크, 징크시공, 징크지붕, 세라믹사이딩, 테라코타, 진타맥스, 지붕리모델링, 외관리모델링, 주택지붕, 상가지붕, 건물외관" />
+  <meta name="keywords" content="천일지붕, 지붕공사, 징크, 징크시공, 징크지붕, 세라믹사이딩, 테라코타, 진타맥스, 지붕리모델링, 외관리모델링, 주택지붕, 상가지붕" />
   <meta property="og:title" content="천일지붕 CHUNIL ROOF | 징크 지붕공사 전문" />
   <meta property="og:description" content="20년 경력, 500건 이상 시공실적. 징크, 세라믹사이딩, 테라코타, 진타맥스 전문 시공." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ko_KR" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif+KR:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="/style.css" rel="stylesheet" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='2' fill='%23111'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='serif' font-size='18' font-weight='700' fill='%23D4845A'%3EC%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='2' fill='%23111'/%3E%3Cpath d='M6 22 L16 10 L26 22' stroke='%23E8A849' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cline x1='4' y1='22' x2='28' y2='22' stroke='%23E8A849' stroke-width='2'/%3E%3C/svg%3E" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -33,91 +33,77 @@
 
   <!-- Nav -->
   <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">
-        <span class="logo-main">천일지붕</span>
-        <span class="logo-divider"></span>
-        <span class="logo-sub">CHUNIL ROOF</span>
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="메뉴">
-        <span></span><span></span>
-      </button>
-      <div class="nav-right" id="navMenu">
-        <ul class="nav-links">
-          <li><a href="#about">소개</a></li>
-          <li><a href="#services">시공분야</a></li>
-          <li><a href="#work">시공사례</a></li>
-          <li><a href="#contact">문의</a></li>
-        </ul>
-        <a href="tel:01072706053" class="nav-phone">010-7270-6053</a>
-      </div>
+    <a href="#" class="nav-logo">
+      <span class="nav-logo-kr">천일지붕</span>
+      <span class="nav-logo-en">CHUNIL ROOF</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="메뉴">
+      <span></span><span></span>
+    </button>
+    <div class="nav-menu" id="navMenu">
+      <a href="#about">회사소개</a>
+      <a href="#services">시공분야</a>
+      <a href="#portfolio">시공사례</a>
+      <a href="#process">프로세스</a>
+      <a href="#contact">문의</a>
+      <a href="tel:01072706053" class="nav-menu-phone">010-7270-6053</a>
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero — Fullscreen Video -->
   <section class="hero" id="hero">
-    <div class="hero-image">
-      <video autoplay muted loop playsinline poster="/pic/1.jpeg">
-        <source src="/pic/hero-bg.mp4" type="video/mp4" />
-      </video>
-      <div class="hero-image-overlay"></div>
-    </div>
-    <div class="hero-body">
-      <div class="hero-label">지붕 &middot; 외관 리모델링 전문</div>
-      <h1 class="hero-heading">
-        건축의 완성,<br>
-        <em>지붕</em>에 있습니다
-      </h1>
-      <p class="hero-desc">
-        징크, 세라믹사이딩, 테라코타, 진타맥스<br>
-        20년 경력 &middot; 500건+ 시공실적
-      </p>
-      <div class="hero-cta">
-        <a href="tel:01072706053" class="btn-fill">전화 상담하기</a>
-        <a href="#contact" class="btn-line">온라인 문의</a>
+    <video class="hero-video" autoplay muted loop playsinline poster="/pic/1.jpeg">
+      <source src="/pic/hero-bg.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-dim"></div>
+    <div class="hero-inner">
+      <div class="hero-logo-block">
+        <div class="hero-logo-line"></div>
+        <p class="hero-logo-label">CHUNIL ROOF</p>
+        <h1 class="hero-logo-title">천일지붕</h1>
+        <div class="hero-logo-line"></div>
+      </div>
+      <p class="hero-tagline">건축의 완성은 지붕에서 시작됩니다</p>
+      <p class="hero-sub">징크 &middot; 세라믹사이딩 &middot; 테라코타 &middot; 진타맥스<br>20년 경력 &middot; 500건+ 시공실적</p>
+      <div class="hero-btns">
+        <a href="tel:01072706053" class="btn-main">전화 상담</a>
+        <a href="#contact" class="btn-ghost">온라인 문의</a>
       </div>
     </div>
-    <div class="hero-ticker">
-      <div class="ticker-item"><span>20</span>년 경력</div>
-      <div class="ticker-sep"></div>
-      <div class="ticker-item"><span>500</span>건+ 시공</div>
-      <div class="ticker-sep"></div>
-      <div class="ticker-item"><span>4</span>대 전문자재</div>
+    <div class="hero-bottom">
+      <div class="hero-stat"><strong>20</strong>년+ 경력</div>
+      <div class="hero-stat"><strong>500</strong>건+ 시공</div>
+      <div class="hero-stat"><strong>4</strong>대 전문자재</div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>SCROLL</span>
+      <div class="scroll-bar"></div>
     </div>
   </section>
 
   <!-- About -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="split">
-        <div class="split-left">
-          <span class="overline">About</span>
-          <h2>천일(千日)의 기술,<br>한결같은 <em>신뢰</em></h2>
+  <section class="sec" id="about">
+    <div class="wrap">
+      <div class="sec-label">ABOUT US</div>
+      <div class="about-layout">
+        <div class="about-left">
+          <h2>千日의 기술력,<br>변하지 않는 <em>신뢰</em></h2>
+          <p class="about-lead">천일지붕은 2004년부터 오직 지붕과 외관 리모델링만을 전문으로 해온 시공 전문업체입니다.</p>
         </div>
-        <div class="split-right">
-          <p class="lead">천일지붕은 2004년부터 주택, 상가, 건물의 지붕과 외관 리모델링만을 전문으로 해온 시공 전문업체입니다.</p>
+        <div class="about-right">
           <p>단순한 공사가 아닌, 건축의 아름다움과 기술력을 결합한 시공을 추구합니다. 500건이 넘는 시공 경험에서 쌓아온 노하우로, 건물의 가치를 높이는 최적의 솔루션을 제공합니다.</p>
-          <div class="values">
-            <div class="value-item">
-              <div class="value-num">01</div>
-              <div>
-                <strong>정직한 시공</strong>
-                <p>보이지 않는 곳까지 꼼꼼하게</p>
-              </div>
+          <div class="about-points">
+            <div class="about-point">
+              <span>01</span>
+              <div><strong>정직한 시공</strong><br>보이지 않는 곳까지 꼼꼼하게</div>
             </div>
-            <div class="value-item">
-              <div class="value-num">02</div>
-              <div>
-                <strong>체계적 관리</strong>
-                <p>계획부터 완공까지 일정 준수</p>
-              </div>
+            <div class="about-point">
+              <span>02</span>
+              <div><strong>체계적 관리</strong><br>계획부터 완공까지 일정 준수</div>
             </div>
-            <div class="value-item">
-              <div class="value-num">03</div>
-              <div>
-                <strong>투명한 견적</strong>
-                <p>자재비부터 인건비까지 상세 안내</p>
-              </div>
+            <div class="about-point">
+              <span>03</span>
+              <div><strong>투명한 견적</strong><br>자재비부터 인건비까지 상세 안내</div>
             </div>
           </div>
         </div>
@@ -125,227 +111,196 @@
     </div>
   </section>
 
-  <!-- Services -->
-  <section class="section section-dark" id="services">
-    <div class="container">
-      <span class="overline">Services</span>
-      <h2>전문 <em>시공</em> 분야</h2>
-      <p class="section-sub">건물의 용도와 환경에 맞는 최적의 자재와 공법을 제안합니다</p>
+  <!-- Services — Alternating Full-Width -->
+  <section class="sec sec-alt" id="services">
+    <div class="wrap">
+      <div class="sec-label">SERVICES</div>
+      <h2 class="sec-heading">전문 시공 분야</h2>
+      <p class="sec-desc">건물의 용도와 환경에 맞는 최적의 자재와 공법</p>
     </div>
-    <div class="services-scroll">
-      <div class="service-card">
-        <div class="service-img"><img src="/pic/10.jpg" alt="징크 지붕 시공" loading="lazy" /></div>
-        <div class="service-body">
-          <span class="service-num">01</span>
-          <h3>징크<small>ZINC</small></h3>
-          <p>유럽에서 검증된 프리미엄 지붕 자재. 자연 산화로 독특한 색감을 형성하며, 100년 이상의 내구성을 자랑합니다.</p>
-          <ul>
-            <li>100년+ 내구성</li>
-            <li>자연 산화 패티나</li>
-            <li>친환경 재활용 소재</li>
-          </ul>
-        </div>
+
+    <div class="svc-row">
+      <div class="svc-img"><img src="/pic/10.jpg" alt="징크 지붕 시공" loading="lazy" /></div>
+      <div class="svc-text">
+        <span class="svc-num">01</span>
+        <h3>징크 <small>ZINC</small></h3>
+        <p>유럽에서 검증된 프리미엄 지붕 자재. 자연 산화로 독특한 색감을 형성하며, 100년 이상의 내구성을 자랑합니다. 고급 주택과 상업 건물에 격조 높은 외관을 완성합니다.</p>
+        <ul><li>100년+ 내구성</li><li>자연 산화 패티나</li><li>친환경 재활용 소재</li><li>다양한 디자인 구현</li></ul>
       </div>
-      <div class="service-card">
-        <div class="service-img"><img src="/pic/3.png" alt="세라믹사이딩 외벽" loading="lazy" /></div>
-        <div class="service-body">
-          <span class="service-num">02</span>
-          <h3>세라믹사이딩<small>CERAMIC SIDING</small></h3>
-          <p>클립 공법으로 석재를 부착하는 고급 외장재. 단열성이 우수하며 빗물로 자연 세정되어 유지관리가 거의 필요 없습니다.</p>
-          <ul>
-            <li>반영구적 사용</li>
-            <li>우수한 단열</li>
-            <li>자연 세정 기능</li>
-          </ul>
-        </div>
+    </div>
+
+    <div class="svc-row svc-reverse">
+      <div class="svc-img"><img src="/pic/3.png" alt="세라믹사이딩 외벽" loading="lazy" /></div>
+      <div class="svc-text">
+        <span class="svc-num">02</span>
+        <h3>세라믹사이딩 <small>CERAMIC SIDING</small></h3>
+        <p>클립 공법으로 석재를 부착하는 고급 외장재. 단열성이 우수하며 빗물로 자연 세정되어 유지관리가 거의 필요 없습니다.</p>
+        <ul><li>반영구적 사용</li><li>우수한 단열 성능</li><li>자연 세정 기능</li><li>다양한 텍스처</li></ul>
       </div>
-      <div class="service-card">
-        <div class="service-img"><img src="/pic/5.jpeg" alt="테라코타 외장" loading="lazy" /></div>
-        <div class="service-body">
-          <span class="service-num">03</span>
-          <h3>테라코타<small>TERRACOTTA</small></h3>
-          <p>천연 점토를 1,100&#8451; 이상 고온에서 구워 만든 프리미엄 외장재. 자연적인 색상과 질감이 건물에 품격을 더합니다.</p>
-          <ul>
-            <li>천연 점토 소재</li>
-            <li>높은 내구성</li>
-            <li>불연 소재</li>
-          </ul>
-        </div>
+    </div>
+
+    <div class="svc-row">
+      <div class="svc-img"><img src="/pic/5.jpeg" alt="테라코타 외장" loading="lazy" /></div>
+      <div class="svc-text">
+        <span class="svc-num">03</span>
+        <h3>테라코타 <small>TERRACOTTA</small></h3>
+        <p>천연 점토를 1,100&#8451; 이상 고온에서 구워 만든 프리미엄 외장재. 자연적인 색상과 질감이 건물에 고급스러운 품격을 더합니다.</p>
+        <ul><li>천연 점토 소재</li><li>높은 내구성</li><li>자연스러운 색감</li><li>불연 소재</li></ul>
       </div>
-      <div class="service-card">
-        <div class="service-img"><img src="/pic/4.png" alt="진타맥스 외벽 패널" loading="lazy" /></div>
-        <div class="service-body">
-          <span class="service-num">04</span>
-          <h3>진타맥스<small>ZINTAMAX</small></h3>
-          <p>블록형 외장 패널로 심플한 직선미를 살려 현대적인 건물 외관을 완성합니다. 맞춤 제작이 가능합니다.</p>
-          <ul>
-            <li>현대적 디자인</li>
-            <li>맞춤형 성형</li>
-            <li>경제적 시공</li>
-          </ul>
-        </div>
+    </div>
+
+    <div class="svc-row svc-reverse">
+      <div class="svc-img"><img src="/pic/4.png" alt="진타맥스 외벽" loading="lazy" /></div>
+      <div class="svc-text">
+        <span class="svc-num">04</span>
+        <h3>진타맥스 <small>ZINTAMAX</small></h3>
+        <p>블록형 외장 패널로 심플한 직선미를 살려 현대적인 건물 외관을 완성합니다. 현장 성형 방식으로 맞춤 제작이 가능합니다.</p>
+        <ul><li>현대적 디자인</li><li>맞춤형 현장 성형</li><li>크기 제한 없음</li><li>경제적 시공</li></ul>
       </div>
     </div>
   </section>
 
-  <!-- Work / Portfolio -->
-  <section class="section" id="work">
-    <div class="container">
-      <div class="work-header">
-        <div>
-          <span class="overline">Portfolio</span>
-          <h2>시공 <em>사례</em></h2>
-        </div>
-        <a href="https://blog.naver.com/misotechne" target="_blank" rel="noopener" class="btn-line btn-sm">블로그에서 더보기 &rarr;</a>
+  <!-- Portfolio -->
+  <section class="sec" id="portfolio">
+    <div class="wrap">
+      <div class="sec-label">PORTFOLIO</div>
+      <div class="portfolio-top">
+        <h2 class="sec-heading">시공 사례</h2>
+        <a href="https://blog.naver.com/misotechne" target="_blank" rel="noopener" class="btn-ghost btn-sm">블로그에서 더보기 &rarr;</a>
       </div>
-      <div class="work-grid">
-        <div class="work-item work-tall">
+      <div class="pf-grid">
+        <div class="pf-item pf-large">
           <img src="/pic/6.jpg" alt="징크 외벽 시공" loading="lazy" />
-          <div class="work-overlay">
-            <span>ZINC</span>
-            <h4>모던 주택 징크 외벽</h4>
-          </div>
+          <div class="pf-caption"><span>ZINC</span>모던 주택 징크 외벽</div>
         </div>
-        <div class="work-item">
+        <div class="pf-item">
           <img src="/pic/9.jpg" alt="세라믹사이딩 시공" loading="lazy" />
-          <div class="work-overlay">
-            <span>CERAMIC</span>
-            <h4>주택 세라믹사이딩</h4>
-          </div>
+          <div class="pf-caption"><span>CERAMIC</span>주택 세라믹사이딩</div>
         </div>
-        <div class="work-item">
+        <div class="pf-item">
           <img src="/pic/8.jpeg" alt="프리미엄 주택" loading="lazy" />
-          <div class="work-overlay">
-            <span>ZINC</span>
-            <h4>프리미엄 주택 외관</h4>
-          </div>
+          <div class="pf-caption"><span>ZINC</span>프리미엄 주택 외관</div>
         </div>
-        <div class="work-item work-tall">
-          <img src="/pic/2.jpeg" alt="모던 주택 외관" loading="lazy" />
-          <div class="work-overlay">
-            <span>TERRACOTTA</span>
-            <h4>화이트 모던 주택</h4>
-          </div>
+        <div class="pf-item">
+          <img src="/pic/2.jpeg" alt="모던 주택" loading="lazy" />
+          <div class="pf-caption"><span>TERRACOTTA</span>화이트 모던 주택</div>
         </div>
-        <div class="work-item">
-          <img src="/pic/7.jpeg" alt="투톤 외벽 시공" loading="lazy" />
-          <div class="work-overlay">
-            <span>ZINTAMAX</span>
-            <h4>투톤 외벽 패널</h4>
-          </div>
+        <div class="pf-item pf-large">
+          <img src="/pic/7.jpeg" alt="투톤 외벽" loading="lazy" />
+          <div class="pf-caption"><span>ZINTAMAX</span>투톤 외벽 패널</div>
         </div>
-        <div class="work-item">
-          <img src="/pic/Image_fx (21).png" alt="클린 화이트 주택" loading="lazy" />
-          <div class="work-overlay">
-            <span>CERAMIC</span>
-            <h4>클린 화이트 외장</h4>
-          </div>
+        <div class="pf-item">
+          <img src="/pic/Image_fx (21).png" alt="화이트 주택" loading="lazy" />
+          <div class="pf-caption"><span>CERAMIC</span>클린 화이트 외장</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Process -->
-  <section class="section section-dark" id="process">
-    <div class="container">
-      <div class="process-header">
-        <span class="overline">Process</span>
-        <h2>시공 <em>프로세스</em></h2>
-      </div>
-      <div class="process-grid">
-        <div class="process-card">
-          <div class="process-num">01</div>
+  <section class="sec sec-alt" id="process">
+    <div class="wrap">
+      <div class="sec-label">PROCESS</div>
+      <h2 class="sec-heading center">시공 프로세스</h2>
+      <div class="proc-row">
+        <div class="proc-card">
+          <div class="proc-icon">01</div>
           <h3>상담 &middot; 현장조사</h3>
           <p>전화 또는 온라인 문의 후 현장을 직접 방문하여 건물 상태와 환경을 정밀 조사합니다.</p>
         </div>
-        <div class="process-card">
-          <div class="process-num">02</div>
+        <div class="proc-arrow">&rarr;</div>
+        <div class="proc-card">
+          <div class="proc-icon">02</div>
           <h3>설계 &middot; 견적</h3>
           <p>최적의 자재와 공법을 제안하고, 투명하고 상세한 견적서를 제공합니다.</p>
         </div>
-        <div class="process-card">
-          <div class="process-num">03</div>
+        <div class="proc-arrow">&rarr;</div>
+        <div class="proc-card">
+          <div class="proc-icon">03</div>
           <h3>시공</h3>
-          <p>숙련된 전문 인력이 체계적인 공정 관리로 시공합니다. 매 단계 품질 검사를 실시합니다.</p>
+          <p>숙련된 전문 인력이 체계적 공정 관리로 시공합니다. 매 단계 품질 검사를 실시합니다.</p>
         </div>
-        <div class="process-card">
-          <div class="process-num">04</div>
+        <div class="proc-arrow">&rarr;</div>
+        <div class="proc-card">
+          <div class="proc-icon">04</div>
           <h3>완공 &middot; 사후관리</h3>
-          <p>최종 검수 후 하자 보증과 함께 지속적인 사후관리 서비스를 제공합니다.</p>
+          <p>최종 검수 후 하자 보증과 함께 지속적인 사후관리를 제공합니다.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="contact-wrap">
-        <div class="contact-left">
-          <span class="overline">Contact</span>
-          <h2>문의하기</h2>
-          <p class="contact-desc">궁금한 사항을 남겨주시면 빠르게 연락드리겠습니다.</p>
-          <div class="contact-info">
-            <a href="tel:01072706053" class="contact-info-item">
-              <strong>전화</strong>
-              <span>010-7270-6053</span>
-            </a>
-            <a href="mailto:misotechne@naver.com" class="contact-info-item">
-              <strong>이메일</strong>
-              <span>misotechne@naver.com</span>
-            </a>
-            <a href="https://blog.naver.com/misotechne" target="_blank" rel="noopener" class="contact-info-item">
-              <strong>블로그</strong>
-              <span>blog.naver.com/misotechne</span>
-            </a>
+  <section class="sec" id="contact">
+    <div class="wrap">
+      <div class="sec-label">CONTACT</div>
+      <h2 class="sec-heading">문의하기</h2>
+      <p class="sec-desc">궁금한 사항을 남겨주시면 빠르게 연락드리겠습니다</p>
+      <div class="contact-layout">
+        <div class="contact-sidebar">
+          <a href="tel:01072706053" class="cs-block cs-phone">
+            <small>전화 상담</small>
+            <strong>010-7270-6053</strong>
+          </a>
+          <div class="cs-block">
+            <small>이메일</small>
+            <a href="mailto:misotechne@naver.com">misotechne@naver.com</a>
+          </div>
+          <div class="cs-block">
+            <small>블로그</small>
+            <a href="https://blog.naver.com/misotechne" target="_blank" rel="noopener">blog.naver.com/misotechne</a>
+          </div>
+          <div class="cs-block">
+            <small>상담시간</small>
+            <span>평일 08:00-18:00 / 토 09:00-15:00</span>
           </div>
         </div>
-        <form class="contact-form" id="contactForm">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">이름 / 업체명 *</label>
-              <input type="text" id="name" name="name" required placeholder="홍길동" />
+        <form class="cform" id="contactForm">
+          <div class="cform-2col">
+            <div class="cform-field">
+              <label>이름 / 업체명 *</label>
+              <input type="text" name="name" required placeholder="홍길동" />
             </div>
-            <div class="form-group">
-              <label for="phone">연락처 *</label>
-              <input type="tel" id="phone" name="phone" required placeholder="010-0000-0000" />
+            <div class="cform-field">
+              <label>연락처 *</label>
+              <input type="tel" name="phone" required placeholder="010-0000-0000" />
             </div>
           </div>
-          <div class="form-group">
-            <label for="service">관심 분야</label>
-            <select id="service" name="service">
+          <div class="cform-field">
+            <label>관심 분야</label>
+            <select name="service">
               <option value="">선택해주세요</option>
-              <option value="징크">징크</option>
-              <option value="세라믹사이딩">세라믹사이딩</option>
-              <option value="테라코타">테라코타</option>
-              <option value="진타맥스">진타맥스</option>
-              <option value="기타">기타</option>
+              <option>징크</option>
+              <option>세라믹사이딩</option>
+              <option>테라코타</option>
+              <option>진타맥스</option>
+              <option>기타</option>
             </select>
           </div>
-          <div class="form-group">
-            <label for="message">문의 내용 *</label>
-            <textarea id="message" name="message" rows="4" required placeholder="공사 위치, 건물 종류, 원하시는 시공 내용 등"></textarea>
+          <div class="cform-field">
+            <label>문의 내용 *</label>
+            <textarea name="message" rows="4" required placeholder="공사 위치, 건물 종류, 원하시는 시공 내용"></textarea>
           </div>
-          <button type="submit" class="btn-fill btn-block">문의 보내기</button>
+          <button type="submit" class="btn-main btn-block">문의 보내기</button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- Floating Phone -->
-  <a href="tel:01072706053" class="float-phone" id="floatPhone" aria-label="전화">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+  <!-- Float Phone -->
+  <a href="tel:01072706053" class="float-btn" id="floatBtn" aria-label="전화 상담">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
   </a>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo">천일지붕 <span>CHUNIL ROOF</span></div>
-          <p>건축의 완성, 지붕에 있습니다</p>
+  <footer class="ft">
+    <div class="wrap">
+      <div class="ft-top">
+        <div>
+          <div class="ft-logo">천일지붕 <span>CHUNIL ROOF</span></div>
+          <p class="ft-slogan">건축의 완성은 지붕에서 시작됩니다</p>
         </div>
-        <div class="footer-cols">
+        <div class="ft-links">
           <div>
             <h4>시공분야</h4>
             <a href="#services">징크</a>
@@ -361,9 +316,7 @@
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 천일지붕 CHUNIL ROOF. All rights reserved.</p>
-      </div>
+      <div class="ft-bottom">&copy; 2024 천일지붕 CHUNIL ROOF. All rights reserved.</div>
     </div>
   </footer>
 
@@ -372,7 +325,7 @@
     <div class="modal-box">
       <h3>문의가 접수되었습니다</h3>
       <p>빠른 시일 내에 연락드리겠습니다.</p>
-      <button class="btn-fill" onclick="document.getElementById('modal').classList.remove('show')">확인</button>
+      <button class="btn-main" onclick="document.getElementById('modal').classList.remove('on')">확인</button>
     </div>
   </div>
 

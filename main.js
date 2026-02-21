@@ -1,44 +1,41 @@
-// CHUNIL ROOF - Sample 2
+// CHUNIL ROOF — Sample 3: Cinematic Dark
 
 document.addEventListener('DOMContentLoaded', () => {
 
   const nav = document.getElementById('nav');
-  const floatPhone = document.getElementById('floatPhone');
+  const floatBtn = document.getElementById('floatBtn');
 
-  // Scroll effects
   function onScroll() {
     const y = window.scrollY;
     nav.classList.toggle('scrolled', y > 40);
-    floatPhone.classList.toggle('show', y > 500);
+    floatBtn.classList.toggle('on', y > 500);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // Mobile nav
-  const toggle = document.getElementById('navToggle');
-  const menu = document.getElementById('navMenu');
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
 
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('open');
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
   });
 
-  menu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      menu.classList.remove('open');
-    });
+  navMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => navMenu.classList.remove('open'));
   });
 
-  // Scroll animation
+  // Reveal on scroll
   const els = document.querySelectorAll(
-    '.split-left, .split-right, .service-card, .work-item, .process-card, .contact-left, .contact-form'
+    '.about-left, .about-right, .svc-row, .pf-item, .proc-card, .contact-sidebar, .cform'
   );
-  els.forEach(el => el.classList.add('fade-up'));
+  els.forEach(el => el.classList.add('reveal'));
 
-  const obs = new IntersectionObserver((entries) => {
+  const obs = new IntersectionObserver(entries => {
     entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('show');
+      if (e.isIntersecting) e.target.classList.add('on');
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
   els.forEach(el => obs.observe(el));
 
@@ -50,8 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const target = document.querySelector(href);
       if (target) {
-        const offset = nav.offsetHeight;
-        window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+        window.scrollTo({ top: target.offsetTop - nav.offsetHeight, behavior: 'smooth' });
       }
     });
   });
@@ -62,20 +58,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   form.addEventListener('submit', e => {
     e.preventDefault();
-    const data = new FormData(form);
-    const subject = encodeURIComponent(`[천일지붕 문의] ${data.get('name')}님`);
+    const d = new FormData(form);
+    const subj = encodeURIComponent(`[천일지붕 문의] ${d.get('name')}님`);
     const body = encodeURIComponent(
-      `이름: ${data.get('name')}\n연락처: ${data.get('phone')}\n관심분야: ${data.get('service') || '미선택'}\n\n${data.get('message')}`
+      `이름: ${d.get('name')}\n연락처: ${d.get('phone')}\n관심분야: ${d.get('service') || '미선택'}\n\n${d.get('message')}`
     );
-    window.location.href = `mailto:misotechne@naver.com?subject=${subject}&body=${body}`;
-    setTimeout(() => {
-      modal.classList.add('show');
-      form.reset();
-    }, 500);
+    window.location.href = `mailto:misotechne@naver.com?subject=${subj}&body=${body}`;
+    setTimeout(() => { modal.classList.add('on'); form.reset(); }, 500);
   });
 
   modal.addEventListener('click', e => {
-    if (e.target === modal) modal.classList.remove('show');
+    if (e.target === modal) modal.classList.remove('on');
   });
 
 });
