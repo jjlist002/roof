@@ -613,15 +613,6 @@ em{font-style:normal;color:var(--amber)}
   position:relative;
   overflow:hidden;
 }
-.sec-benefits::before{
-  content:'';
-  position:absolute;inset:0;
-  background:url('/pic/sketch.png') center/cover no-repeat;
-  opacity:.04;
-  filter:grayscale(.7) brightness(.9);
-  pointer-events:none;
-  z-index:0;
-}
 .sec-benefits .wrap{
   position:relative;
   z-index:1;
