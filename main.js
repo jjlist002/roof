@@ -3,12 +3,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   const nav = document.getElementById('nav');
-  const floatBtn = document.getElementById('floatBtn');
+  const floatBtns = document.getElementById('floatBtns');
 
   function onScroll() {
     const y = window.scrollY;
     nav.classList.toggle('scrolled', y > 40);
-    floatBtn.classList.toggle('on', y > 500);
+    floatBtns.classList.toggle('on', y > 500);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
