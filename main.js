@@ -42,20 +42,38 @@ document.addEventListener('DOMContentLoaded', () => {
   // Music player
   const musicBtn = document.getElementById('musicBtn');
   const heroMusic = document.getElementById('heroMusic');
+  const floatMusic = document.getElementById('floatMusic');
   let musicPlaying = false;
 
+  function stopMusic() {
+    heroMusic.pause();
+    musicPlaying = false;
+    musicBtn.classList.remove('playing');
+    floatMusic.style.display = 'none';
+  }
+
+  function startMusic() {
+    heroMusic.play().then(() => {
+      musicPlaying = true;
+      musicBtn.classList.add('playing');
+      updateFloatMusic();
+    }).catch(() => {});
+  }
+
+  function updateFloatMusic() {
+    const heroBottom = document.getElementById('hero').getBoundingClientRect().bottom;
+    floatMusic.style.display = (musicPlaying && heroBottom < 0) ? 'flex' : 'none';
+  }
+
   musicBtn.addEventListener('click', () => {
-    if (!musicPlaying) {
-      heroMusic.play().then(() => {
-        musicPlaying = true;
-        musicBtn.classList.add('playing');
-      }).catch(() => {});
-    } else {
-      heroMusic.pause();
-      musicPlaying = false;
-      musicBtn.classList.remove('playing');
-    }
+    musicPlaying ? stopMusic() : startMusic();
   });
+
+  floatMusic.addEventListener('click', () => {
+    stopMusic();
+  });
+
+  window.addEventListener('scroll', updateFloatMusic, { passive: true });
 
   // Intro icon glow on click
   const introIcon = document.querySelector('.intro-icon-wrap');

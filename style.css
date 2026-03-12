@@ -312,6 +312,17 @@ em{font-style:normal;color:var(--amber)}
 }
 .float-btn:hover{transform:translateY(-2px)}
 
+.float-music{
+  background:var(--amber);color:#1a1a1a;
+  border:none;cursor:pointer;
+  animation:float-music-pulse 2s ease-in-out infinite;
+}
+.float-music:hover{background:var(--amber-dim);color:#1a1a1a}
+@keyframes float-music-pulse{
+  0%,100%{box-shadow:0 4px 16px rgba(0,0,0,.25)}
+  50%{box-shadow:0 4px 16px rgba(0,0,0,.25), 0 0 16px rgba(232,168,73,.4)}
+}
+
 .float-kakao{
   background:#FEE500;color:#3C1E1E;
 }
