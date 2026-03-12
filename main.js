@@ -52,19 +52,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Contact form
+  // Contact form — Web3Forms
+  const WEB3FORMS_KEY = 'ed1f8ced-c8a0-4526-a2b7-b2105ae5b3d3';
+
   const form = document.getElementById('contactForm');
   const modal = document.getElementById('modal');
+  const submitBtn = form.querySelector('button[type="submit"]');
 
   form.addEventListener('submit', e => {
     e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = '전송 중...';
+
     const d = new FormData(form);
-    const subj = encodeURIComponent(`[천일지붕 문의] ${d.get('name')}님`);
-    const body = encodeURIComponent(
-      `이름: ${d.get('name')}\n연락처: ${d.get('phone')}\n관심분야: ${d.get('service') || '미선택'}\n\n${d.get('message')}`
-    );
-    window.location.href = `mailto:misotechne@naver.com?subject=${subj}&body=${body}`;
-    setTimeout(() => { modal.classList.add('on'); form.reset(); }, 500);
+    const payload = {
+      access_key: WEB3FORMS_KEY,
+      subject: '[천일지붕 문의] ' + d.get('name') + '님',
+      from_name: d.get('name'),
+      phone: d.get('phone'),
+      service: d.get('service') || '미선택',
+      message: d.get('message'),
+    };
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          modal.classList.add('on');
+          form.reset();
+        } else {
+          throw new Error(data.message);
+        }
+      })
+      .catch(err => {
+        console.error('Web3Forms error:', err);
+        alert('전송에 실패했습니다. 직접 전화(010-7270-6053) 또는 이메일로 문의해주세요.');
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = '문의 보내기';
+      });
   });
 
   modal.addEventListener('click', e => {
