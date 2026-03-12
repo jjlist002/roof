@@ -75,7 +75,7 @@ em{font-style:normal;color:var(--amber)}
 .nav{
   position:fixed;top:0;left:0;right:0;z-index:1000;
   display:flex;align-items:center;justify-content:space-between;
-  height:80px;padding:0 32px;
+  height:70px;padding:0 32px;
   transition:background .4s,border .4s;
   border-bottom:1px solid transparent;
 }
@@ -88,7 +88,7 @@ em{font-style:normal;color:var(--amber)}
   display:flex;align-items:center;text-decoration:none;
 }
 .nav-logo-img{
-  height:160px;width:auto;display:block;
+  height:112px;width:auto;display:block;
   filter:brightness(0) invert(1);
 }
 
@@ -945,6 +945,7 @@ em{font-style:normal;color:var(--amber)}
 @media(max-width:768px){
   /* Nav */
   .nav{height:54px;padding:0 20px}
+  .nav-logo-img{height:56px}
   .nav-logo-kr{font-size:.92rem}
   .nav-logo-en{font-size:.5rem;letter-spacing:2px}
 
