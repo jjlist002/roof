@@ -415,26 +415,24 @@ em{font-style:normal;color:var(--amber)}
   margin-bottom:12px;
 }
 
-.solution-col ul{
-  list-style:none;
-  padding:0;
+.solution-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
   margin-bottom:16px;
 }
 
-.solution-col li{
-  font-size:.78rem;
-  color:var(--dark-gray);
-  padding-left:14px;
-  position:relative;
-  margin-bottom:4px;
-}
-
-.solution-col li::before{
-  content:'';
-  position:absolute;
-  left:0;top:8px;
-  width:6px;height:1px;
-  background:var(--amber);
+.sol-tag{
+  display:inline-block;
+  padding:5px 12px;
+  font-size:.72rem;
+  font-weight:500;
+  color:var(--dark-text);
+  background:var(--light-bg2);
+  border:1px solid #ddd;
+  border-radius:20px;
+  white-space:nowrap;
+  line-height:1.4;
 }
 
 /* ============ 4. SEC-SHOWCASE ============ */
