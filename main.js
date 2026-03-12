@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Reveal on scroll
   const els = document.querySelectorAll(
-    '.about-left, .about-right, .svc-row, .pf-item, .proc-card, .contact-sidebar, .cform'
+    '.intro-card, .product-card, .solution-col, .showcase-text, .benefit-item, .gallery-item, .process-card, .cta-content, .contact-sidebar, .cform'
   );
   els.forEach(el => el.classList.add('reveal'));
 

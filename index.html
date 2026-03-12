@@ -10,11 +10,22 @@
   <meta property="og:description" content="20년 경력, 500건 이상 시공실적. 징크, 세라믹사이딩, 테라코타, 진타맥스 전문 시공." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="천일지붕 CHUNIL ROOF | 징크 지붕공사 전문" />
+  <meta name="twitter:description" content="20년 경력, 500건 이상 시공실적. 징크, 세라믹사이딩, 테라코타, 진타맥스 전문 시공." />
+  <meta name="twitter:image" content="/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="/style.css" rel="stylesheet" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='2' fill='%23111'/%3E%3Cpath d='M6 22 L16 10 L26 22' stroke='%23E8A849' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cline x1='4' y1='22' x2='28' y2='22' stroke='%23E8A849' stroke-width='2'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -88,161 +99,255 @@
     </div>
   </section>
 
-  <!-- About -->
-  <section class="sec" id="about">
+  <!-- About Intro -->
+  <section class="sec-intro" id="about">
     <div class="wrap">
-      <div class="sec-label">ABOUT US</div>
-      <div class="about-layout">
-        <div class="about-left">
-          <h2>천일(千日)의 기술,<br>한결같은 <em>신뢰</em></h2>
+      <div class="intro-card">
+        <div class="intro-icon-wrap">
+          <svg viewBox="0 0 40 32" width="40" height="32">
+            <path d="M4 28 L20 8 L36 28" stroke="#E8A849" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="2" y1="28" x2="38" y2="28" stroke="#E8A849" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
         </div>
-        <div class="about-right">
-          <p class="about-lead">천일지붕은 2004년부터 주택, 상가, 건물의 지붕과 외관 리모델링만을 전문으로 해온 시공 전문업체입니다.</p>
-          <p>단순한 공사가 아닌, 건축의 아름다움과 기술력을 결합한 시공을 추구합니다. 500건이 넘는 시공 경험에서 쌓아온 노하우로, 건물의 가치를 높이는 최적의 솔루션을 제공합니다.</p>
-          <div class="about-points">
-            <div class="about-point">
-              <span>01</span>
-              <div><strong>정직한 시공</strong><br>보이지 않는 곳까지 꼼꼼하게</div>
-            </div>
-            <div class="about-point">
-              <span>02</span>
-              <div><strong>체계적 관리</strong><br>계획부터 완공까지 일정 준수</div>
-            </div>
-            <div class="about-point">
-              <span>03</span>
-              <div><strong>투명한 견적</strong><br>자재비부터 인건비까지 상세 안내</div>
-            </div>
+        <div class="intro-body">
+          <h2>천일(千日)의 기술, 한결같은 <em>신뢰</em></h2>
+          <p>천일지붕은 2004년부터 주택, 상가, 건물의 지붕과 외관 리모델링만을 전문으로 해온 시공 전문업체입니다. 단순한 공사가 아닌, 건축의 아름다움과 기술력을 결합한 시공을 추구합니다. 500건이 넘는 시공 경험에서 쌓아온 노하우로, 건물의 가치를 높이는 최적의 솔루션을 제공합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section class="sec-products" id="services">
+    <div class="wrap">
+      <h2 class="sec-title-center">전문 시공 분야</h2>
+      <p class="sec-subtitle-center">건물의 용도와 환경에 맞는 최적의 자재와 공법</p>
+    </div>
+    <div class="wrap-wide">
+      <div class="products-grid">
+        <div class="product-card">
+          <img src="/pic/10.jpg" alt="징크 지붕 시공" loading="lazy" />
+          <div class="product-label">징크 <span>ZINC</span></div>
+        </div>
+        <div class="product-card">
+          <img src="/pic/3.png" alt="세라믹사이딩 외벽" loading="lazy" />
+          <div class="product-label">세라믹사이딩 <span>CERAMIC SIDING</span></div>
+        </div>
+        <div class="product-card">
+          <img src="/pic/5.jpeg" alt="테라코타 외장" loading="lazy" />
+          <div class="product-label">테라코타 <span>TERRACOTTA</span></div>
+        </div>
+        <div class="product-card">
+          <img src="/pic/4.png" alt="진타맥스 외벽" loading="lazy" />
+          <div class="product-label">진타맥스 <span>ZINTAMAX</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions -->
+  <section class="sec-solutions">
+    <div class="wrap">
+      <h2 class="sec-title-center">이런 분들을 위한 솔루션</h2>
+      <div class="solutions-grid">
+        <div class="solution-col">
+          <div class="solution-imgs">
+            <img src="/pic/8.jpeg" alt="주택 외관" loading="lazy" />
+            <img src="/pic/2.jpeg" alt="주택 지붕" loading="lazy" />
           </div>
+          <h3>주택 소유주</h3>
+          <p>노후된 지붕과 외벽을 새롭게. 단열 성능 향상과 함께 건물의 가치를 높이는 리모델링 솔루션을 제공합니다.</p>
+          <ul>
+            <li>지붕 교체 및 보수</li>
+            <li>외벽 리모델링</li>
+            <li>단열 성능 개선</li>
+          </ul>
+          <a href="#contact" class="btn-red">자세히 보기</a>
+        </div>
+        <div class="solution-col">
+          <div class="solution-imgs">
+            <img src="/pic/6.jpg" alt="상가 건물" loading="lazy" />
+            <img src="/pic/9.jpg" alt="상가 외벽" loading="lazy" />
+          </div>
+          <h3>상가 &middot; 건물주</h3>
+          <p>상업 건물의 이미지를 결정하는 외관. 내구성과 디자인을 모두 만족하는 전문 시공으로 건물의 품격을 높입니다.</p>
+          <ul>
+            <li>상가 외관 리뉴얼</li>
+            <li>방수 및 단열 시공</li>
+            <li>맞춤형 디자인</li>
+          </ul>
+          <a href="#contact" class="btn-red">자세히 보기</a>
+        </div>
+        <div class="solution-col">
+          <div class="solution-imgs">
+            <img src="/pic/7.jpeg" alt="건축 설계" loading="lazy" />
+            <img src="/pic/Image_fx (21).png" alt="신축 건물" loading="lazy" />
+          </div>
+          <h3>건축사 &middot; 시공사</h3>
+          <p>설계 단계부터 함께하는 전문 파트너. 자재 선정부터 시공까지 체계적인 협업으로 프로젝트의 완성도를 높입니다.</p>
+          <ul>
+            <li>자재 컨설팅</li>
+            <li>설계 협업</li>
+            <li>대량 시공 대응</li>
+          </ul>
+          <a href="#contact" class="btn-red">자세히 보기</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services — Alternating Full-Width -->
-  <section class="sec sec-alt" id="services">
+  <!-- Showcase -->
+  <section class="sec-showcase">
+    <div class="showcase-img">
+      <img src="/pic/10.jpg" alt="징크 시공 현장" loading="lazy" />
+    </div>
+    <div class="showcase-text">
+      <span class="showcase-label">징크 전문 시공</span>
+      <h2>유럽이 인정한<br>프리미엄 지붕 자재</h2>
+      <p>자연 산화로 독특한 색감을 형성하며, 100년 이상의 내구성을 자랑합니다. 고급 주택과 상업 건물에 격조 높은 외관을 완성합니다. 친환경 재활용 소재로 지속가능한 건축을 실현합니다.</p>
+      <a href="#contact" class="btn-red">시공 상담하기</a>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="sec-benefits">
     <div class="wrap">
-      <div class="sec-label">SERVICES</div>
-      <h2 class="sec-heading">전문 시공 분야</h2>
-      <p class="sec-desc">건물의 용도와 환경에 맞는 최적의 자재와 공법</p>
-    </div>
-
-    <div class="svc-row">
-      <div class="svc-img"><img src="/pic/10.jpg" alt="징크 지붕 시공" loading="lazy" /></div>
-      <div class="svc-text">
-        <span class="svc-num">01</span>
-        <h3>징크 <small>ZINC</small></h3>
-        <p>유럽에서 검증된 프리미엄 지붕 자재. 자연 산화로 독특한 색감을 형성하며, 100년 이상의 내구성을 자랑합니다. 고급 주택과 상업 건물에 격조 높은 외관을 완성합니다.</p>
-        <ul><li>100년+ 내구성</li><li>자연 산화 패티나</li><li>친환경 재활용 소재</li><li>다양한 디자인 구현</li></ul>
-      </div>
-    </div>
-
-    <div class="svc-row svc-reverse">
-      <div class="svc-img"><img src="/pic/3.png" alt="세라믹사이딩 외벽" loading="lazy" /></div>
-      <div class="svc-text">
-        <span class="svc-num">02</span>
-        <h3>세라믹사이딩 <small>CERAMIC SIDING</small></h3>
-        <p>클립 공법으로 석재를 부착하는 고급 외장재. 단열성이 우수하며 빗물로 자연 세정되어 유지관리가 거의 필요 없습니다.</p>
-        <ul><li>반영구적 사용</li><li>우수한 단열 성능</li><li>자연 세정 기능</li><li>다양한 텍스처</li></ul>
-      </div>
-    </div>
-
-    <div class="svc-row">
-      <div class="svc-img"><img src="/pic/5.jpeg" alt="테라코타 외장" loading="lazy" /></div>
-      <div class="svc-text">
-        <span class="svc-num">03</span>
-        <h3>테라코타 <small>TERRACOTTA</small></h3>
-        <p>천연 점토를 1,100&#8451; 이상 고온에서 구워 만든 프리미엄 외장재. 자연적인 색상과 질감이 건물에 고급스러운 품격을 더합니다.</p>
-        <ul><li>천연 점토 소재</li><li>높은 내구성</li><li>자연스러운 색감</li><li>불연 소재</li></ul>
-      </div>
-    </div>
-
-    <div class="svc-row svc-reverse">
-      <div class="svc-img"><img src="/pic/4.png" alt="진타맥스 외벽" loading="lazy" /></div>
-      <div class="svc-text">
-        <span class="svc-num">04</span>
-        <h3>진타맥스 <small>ZINTAMAX</small></h3>
-        <p>블록형 외장 패널로 심플한 직선미를 살려 현대적인 건물 외관을 완성합니다. 현장 성형 방식으로 맞춤 제작이 가능합니다.</p>
-        <ul><li>현대적 디자인</li><li>맞춤형 현장 성형</li><li>크기 제한 없음</li><li>경제적 시공</li></ul>
+      <h2 class="benefits-heading">천일지붕의 약속</h2>
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M24 4L6 18v22a2 2 0 002 2h32a2 2 0 002-2V18L24 4z"/>
+              <path d="M16 42V28h16v14"/>
+            </svg>
+          </div>
+          <h3>20년+ 경력</h3>
+          <p>2004년부터 지붕 전문 시공.<br>정직한 시공으로 쌓아온 신뢰</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="24" cy="24" r="20"/>
+              <path d="M24 14v10l7 7"/>
+            </svg>
+          </div>
+          <h3>체계적 관리</h3>
+          <p>계획부터 완공까지 일정 준수.<br>매 단계 품질 검사 실시</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="6" y="6" width="36" height="36" rx="4"/>
+              <path d="M16 24h16M16 18h16M16 30h10"/>
+            </svg>
+          </div>
+          <h3>투명한 견적</h3>
+          <p>자재비부터 인건비까지 상세 안내.<br>추가 비용 없는 정직한 견적</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio -->
-  <section class="sec" id="portfolio">
-    <div class="wrap">
-      <div class="sec-label">PORTFOLIO</div>
-      <div class="portfolio-top">
-        <h2 class="sec-heading">시공 사례</h2>
-        <a href="https://blog.naver.com/misotechne" target="_blank" rel="noopener" class="btn-ghost btn-sm">블로그에서 더보기 &rarr;</a>
+  <!-- Gallery -->
+  <section class="sec-gallery" id="portfolio">
+    <div class="gallery-row">
+      <div class="gallery-item">
+        <img src="/pic/6.jpg" alt="모던 주택 징크 외벽" loading="lazy" />
       </div>
-      <div class="pf-grid">
-        <div class="pf-item pf-large">
-          <img src="/pic/6.jpg" alt="징크 외벽 시공" loading="lazy" />
-          <div class="pf-caption"><span>ZINC</span>모던 주택 징크 외벽</div>
+      <div class="gallery-item">
+        <img src="/pic/8.jpeg" alt="프리미엄 주택 외관" loading="lazy" />
+      </div>
+    </div>
+    <div class="gallery-row">
+      <div class="gallery-item">
+        <img src="/pic/7.jpeg" alt="투톤 외벽 패널" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img src="/pic/2.jpeg" alt="화이트 모던 주택" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery CTA -->
+  <section class="sec-gallery-cta">
+    <div class="wrap">
+      <div class="gallery-cta-layout">
+        <div class="gallery-cta-img">
+          <img src="/pic/9.jpg" alt="시공사례" loading="lazy" />
         </div>
-        <div class="pf-item">
-          <img src="/pic/9.jpg" alt="세라믹사이딩 시공" loading="lazy" />
-          <div class="pf-caption"><span>CERAMIC</span>주택 세라믹사이딩</div>
-        </div>
-        <div class="pf-item">
-          <img src="/pic/8.jpeg" alt="프리미엄 주택" loading="lazy" />
-          <div class="pf-caption"><span>ZINC</span>프리미엄 주택 외관</div>
-        </div>
-        <div class="pf-item">
-          <img src="/pic/2.jpeg" alt="모던 주택" loading="lazy" />
-          <div class="pf-caption"><span>TERRACOTTA</span>화이트 모던 주택</div>
-        </div>
-        <div class="pf-item pf-large">
-          <img src="/pic/7.jpeg" alt="투톤 외벽" loading="lazy" />
-          <div class="pf-caption"><span>ZINTAMAX</span>투톤 외벽 패널</div>
-        </div>
-        <div class="pf-item">
-          <img src="/pic/Image_fx (21).png" alt="화이트 주택" loading="lazy" />
-          <div class="pf-caption"><span>CERAMIC</span>클린 화이트 외장</div>
+        <div class="gallery-cta-text">
+          <h2 class="sec-title-center" style="text-align:left">시공사례 갤러리</h2>
+          <p>500건이 넘는 시공 경험에서 쌓아온 노하우.<br>천일지붕의 다양한 시공사례를 블로그에서 확인하세요.</p>
+          <a href="https://blog.naver.com/misotechne" target="_blank" rel="noopener" class="btn-red">블로그에서 더보기 &rarr;</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Process -->
-  <section class="sec sec-alt" id="process">
+  <section class="sec-process" id="process">
     <div class="wrap">
-      <div class="sec-label">PROCESS</div>
-      <h2 class="sec-heading center">시공 프로세스</h2>
-      <div class="proc-row">
-        <div class="proc-card">
-          <div class="proc-icon">01</div>
-          <h3>상담 &middot; 현장조사</h3>
-          <p>전화 또는 온라인 문의 후 현장을 직접 방문하여 건물 상태와 환경을 정밀 조사합니다.</p>
+      <h2 class="sec-title-center">시공 프로세스</h2>
+      <p class="sec-subtitle-center">상담부터 완공까지 체계적으로</p>
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-card-img">
+            <span class="proc-num">01</span>
+          </div>
+          <div class="process-card-body">
+            <h3>상담 &middot; 현장조사</h3>
+            <p>전화 또는 온라인 문의 후 현장을 직접 방문하여 건물 상태와 환경을 정밀 조사합니다.</p>
+            <a href="#contact" class="process-link">상담 신청 &rarr;</a>
+          </div>
         </div>
-        <div class="proc-arrow">&rarr;</div>
-        <div class="proc-card">
-          <div class="proc-icon">02</div>
-          <h3>설계 &middot; 견적</h3>
-          <p>최적의 자재와 공법을 제안하고, 투명하고 상세한 견적서를 제공합니다.</p>
+        <div class="process-card">
+          <div class="process-card-img">
+            <span class="proc-num">02</span>
+          </div>
+          <div class="process-card-body">
+            <h3>설계 &middot; 견적</h3>
+            <p>최적의 자재와 공법을 제안하고, 투명하고 상세한 견적서를 제공합니다.</p>
+            <a href="#contact" class="process-link">견적 문의 &rarr;</a>
+          </div>
         </div>
-        <div class="proc-arrow">&rarr;</div>
-        <div class="proc-card">
-          <div class="proc-icon">03</div>
-          <h3>시공</h3>
-          <p>숙련된 전문 인력이 체계적 공정 관리로 시공합니다. 매 단계 품질 검사를 실시합니다.</p>
+        <div class="process-card">
+          <div class="process-card-img">
+            <span class="proc-num">03</span>
+          </div>
+          <div class="process-card-body">
+            <h3>시공 &middot; 품질관리</h3>
+            <p>숙련된 전문 인력이 체계적 공정 관리로 시공합니다. 매 단계 품질 검사를 실시합니다.</p>
+          </div>
         </div>
-        <div class="proc-arrow">&rarr;</div>
-        <div class="proc-card">
-          <div class="proc-icon">04</div>
-          <h3>완공 &middot; 사후관리</h3>
-          <p>최종 검수 후 하자 보증과 함께 지속적인 사후관리를 제공합니다.</p>
+        <div class="process-card">
+          <div class="process-card-img">
+            <span class="proc-num">04</span>
+          </div>
+          <div class="process-card-body">
+            <h3>완공 &middot; 사후관리</h3>
+            <p>최종 검수 후 하자 보증과 함께 지속적인 사후관리를 제공합니다.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- CTA Dramatic -->
+  <section class="sec-cta-dramatic">
+    <img src="/pic/1.jpeg" alt="지붕 시공" class="cta-bg-img" loading="lazy" />
+    <div class="cta-overlay"></div>
+    <div class="cta-content">
+      <h2>모든 지붕과<br>외벽 시공은<br>전문가에게</h2>
+      <p>20년 경력의 천일지붕이 건물의 가치를 높이는 최적의 솔루션을 제공합니다.</p>
+      <a href="tel:01072706053" class="btn-red">지금 상담하기</a>
+    </div>
+  </section>
+
   <!-- Contact -->
-  <section class="sec" id="contact">
+  <section class="sec-contact" id="contact">
     <div class="wrap">
-      <div class="sec-label">CONTACT</div>
-      <h2 class="sec-heading">문의하기</h2>
-      <p class="sec-desc">궁금한 사항을 남겨주시면 빠르게 연락드리겠습니다</p>
+      <h2 class="sec-title-center">문의하기</h2>
+      <p class="sec-subtitle-center">궁금한 사항을 남겨주시면 빠르게 연락드리겠습니다</p>
       <div class="contact-layout">
         <div class="contact-sidebar">
           <a href="tel:01072706053" class="cs-block cs-phone">
@@ -294,11 +399,6 @@
     </div>
   </section>
 
-  <!-- Float Phone -->
-  <a href="tel:01072706053" class="float-btn" id="floatBtn" aria-label="전화 상담">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-  </a>
-
   <!-- Footer -->
   <footer class="ft">
     <div class="wrap">
@@ -326,6 +426,11 @@
       <div class="ft-bottom">&copy; 2024 천일지붕 CHUNIL ROOF. All rights reserved.</div>
     </div>
   </footer>
+
+  <!-- Float Phone -->
+  <a href="tel:01072706053" class="float-btn" id="floatBtn" aria-label="전화 상담">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+  </a>
 
   <!-- Modal -->
   <div class="modal" id="modal">
