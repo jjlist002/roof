@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://misotechne.co.kr/sitemap.xml
