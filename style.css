@@ -617,7 +617,7 @@ em{font-style:normal;color:var(--amber)}
   content:'';
   position:absolute;inset:0;
   background:url('/pic/sketch.png') center/cover no-repeat;
-  opacity:.18;
+  opacity:.10;
   filter:grayscale(.7) brightness(.9);
   pointer-events:none;
   z-index:0;
