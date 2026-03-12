@@ -39,6 +39,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   els.forEach(el => obs.observe(el));
 
+  // Music player
+  const musicBtn = document.getElementById('musicBtn');
+  const heroMusic = document.getElementById('heroMusic');
+
+  musicBtn.addEventListener('click', () => {
+    if (heroMusic.muted) {
+      heroMusic.muted = false;
+      musicBtn.classList.add('playing');
+    } else {
+      heroMusic.muted = true;
+      musicBtn.classList.remove('playing');
+    }
+  });
+
+  // Intro icon glow on click
+  const introIcon = document.querySelector('.intro-icon-wrap');
+  if (introIcon) {
+    introIcon.addEventListener('click', () => {
+      introIcon.classList.remove('glow');
+      void introIcon.offsetWidth; // reflow to restart animation
+      introIcon.classList.add('glow');
+    });
+  }
+
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
