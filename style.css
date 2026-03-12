@@ -582,6 +582,20 @@ em{font-style:normal;color:var(--amber)}
   padding:80px 0;
   text-align:center;
   position:relative;
+  overflow:hidden;
+}
+.sec-benefits::before{
+  content:'';
+  position:absolute;inset:0;
+  background:url('/pic/blueprint-bg.jpg') center/cover no-repeat;
+  opacity:.3;
+  pointer-events:none;
+  z-index:0;
+}
+.sec-benefits .wrap{
+  position:relative;
+  z-index:1;
+  position:relative;
 }
 
 .benefits-heading{
@@ -1086,7 +1100,7 @@ em{font-style:normal;color:var(--amber)}
   /* Intro */
   .intro-card{flex-direction:column;text-align:center;padding:40px 24px 28px}
   .intro-icon-wrap{width:140px;height:140px}
-  .intro-icon-wrap img{width:108px}
+  .intro-icon-wrap img{width:124px}
 
   /* Products */
   .products-grid{grid-template-columns:repeat(2,1fr)}
