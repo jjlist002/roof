@@ -93,7 +93,7 @@ em{font-style:normal;color:var(--amber)}
   font-family:var(--serif);font-size:1.05rem;font-weight:700;color:var(--white);
 }
 .nav-logo-en{
-  font-size:.55rem;font-weight:500;letter-spacing:3px;color:var(--muted);text-transform:uppercase;
+  font-size:.55rem;font-weight:500;letter-spacing:3px;color:rgba(240,235,227,.7);text-transform:uppercase;
 }
 
 .hamburger{
@@ -138,8 +138,8 @@ em{font-style:normal;color:var(--amber)}
 
 .hero-inner{
   position:relative;z-index:2;
-  max-width:680px;padding:0 24px;
-  opacity:.85;
+  max-width:720px;padding:0 24px;
+  opacity:1;
 }
 
 /* Logo Block */
@@ -171,18 +171,19 @@ em{font-style:normal;color:var(--amber)}
 
 .hero-tagline{
   font-family:var(--serif);
-  font-size:clamp(1rem,2vw,1.3rem);
-  font-weight:400;
-  color:var(--white);
-  margin-bottom:12px;
-  letter-spacing:1px;
+  font-size:clamp(1.15rem,2.5vw,1.6rem);
+  font-weight:500;
+  color:#fff;
+  margin-bottom:16px;
+  letter-spacing:2px;
 }
 
 .hero-sub{
-  font-size:.9rem;
-  color:var(--gray);
+  font-size:.95rem;
+  color:rgba(255,255,255,.85);
   margin-bottom:36px;
   line-height:1.8;
+  letter-spacing:.5px;
 }
 
 .hero-btns{
@@ -197,7 +198,7 @@ em{font-style:normal;color:var(--amber)}
   background:rgba(11,11,11,.92);
   border-top:1px solid var(--line);
 }
-.hero-stat{font-size:.85rem;color:var(--gray)}
+.hero-stat{font-size:.85rem;color:rgba(255,255,255,.7)}
 .hero-stat strong{font-size:1.3rem;font-weight:700;color:var(--amber);margin-right:3px}
 
 /* Scroll hint */
