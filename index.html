@@ -155,16 +155,18 @@
     </video>
     <div class="hero-dim"></div>
     <div class="hero-inner">
-      <audio id="heroMusic" src="/pic/chunil-song.mp3" autoplay muted loop></audio>
+      <audio id="heroMusic" src="/pic/chunil-song.mp3" loop preload="auto"></audio>
+      <button class="music-btn" id="musicBtn" aria-label="음악 재생/음소거" title="음악 ON/OFF">
+        <svg class="music-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+          <path class="music-wave1" d="M15.54 8.46a5 5 0 010 7.07"/>
+          <path class="music-wave2" d="M19.07 4.93a10 10 0 010 14.14"/>
+        </svg>
+        <span class="music-ring music-ring1"></span>
+        <span class="music-ring music-ring2"></span>
+        <span class="music-ring music-ring3"></span>
+      </button>
       <div class="hero-logo-block">
-        <button class="music-btn" id="musicBtn" aria-label="음악 재생/음소거" title="음악 ON/OFF">
-          <svg class="music-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M11 5L6 9H2v6h4l5 4V5z"/>
-            <path class="music-wave1" d="M15.54 8.46a5 5 0 010 7.07"/>
-            <path class="music-wave2" d="M19.07 4.93a10 10 0 010 14.14"/>
-          </svg>
-          <span class="music-ring"></span>
-        </button>
         <div class="hero-logo-line"></div>
         <p class="hero-logo-label">CHUNIL ROOF</p>
         <h1 class="hero-logo-title">천일지붕</h1>
@@ -193,7 +195,7 @@
     <div class="wrap">
       <div class="intro-card">
         <div class="intro-icon-wrap">
-          <img src="/pic/logo.png" alt="천일지붕 로고" width="64" height="54" />
+          <img src="/pic/logo.png" alt="천일지붕 로고" width="78" height="66" />
         </div>
         <div class="intro-body">
           <h2>천일(千日)의 기술, 한결같은 <em>신뢰</em></h2>

@@ -42,13 +42,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Music player
   const musicBtn = document.getElementById('musicBtn');
   const heroMusic = document.getElementById('heroMusic');
+  let musicPlaying = false;
 
   musicBtn.addEventListener('click', () => {
-    if (heroMusic.muted) {
-      heroMusic.muted = false;
-      musicBtn.classList.add('playing');
+    if (!musicPlaying) {
+      heroMusic.play().then(() => {
+        musicPlaying = true;
+        musicBtn.classList.add('playing');
+      }).catch(() => {});
     } else {
-      heroMusic.muted = true;
+      heroMusic.pause();
+      musicPlaying = false;
       musicBtn.classList.remove('playing');
     }
   });

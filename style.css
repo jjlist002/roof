@@ -170,15 +170,16 @@ em{font-style:normal;color:var(--amber)}
 .music-btn{
   position:relative;
   background:none;border:none;cursor:pointer;
-  color:var(--amber);
-  width:36px;height:36px;
+  color:rgba(255,255,255,.5);
+  width:44px;height:44px;
   display:flex;align-items:center;justify-content:center;
-  margin:0 auto 12px;
+  margin:0 auto 24px;
   transition:color .3s;
   z-index:2;
 }
-.music-btn:hover{color:#fff}
-.music-icon{width:22px;height:22px}
+.music-btn:hover{color:var(--amber)}
+.music-btn.playing{color:var(--amber)}
+.music-icon{width:24px;height:24px}
 .music-wave1,.music-wave2{
   opacity:.3;
   transition:opacity .3s;
@@ -187,25 +188,35 @@ em{font-style:normal;color:var(--amber)}
 .music-btn.playing .music-wave2{
   opacity:1;
 }
-.music-btn.playing .music-wave1{animation:music-pulse 1.2s ease-in-out infinite}
-.music-btn.playing .music-wave2{animation:music-pulse 1.2s ease-in-out infinite .3s}
+.music-btn.playing .music-wave1{animation:music-pulse 1s ease-in-out infinite}
+.music-btn.playing .music-wave2{animation:music-pulse 1s ease-in-out infinite .25s}
 .music-ring{
-  position:absolute;inset:-4px;
+  position:absolute;
+  top:50%;left:50%;
+  width:44px;height:44px;
+  margin:-22px 0 0 -22px;
   border-radius:50%;
   border:1.5px solid var(--amber);
   opacity:0;
   pointer-events:none;
 }
 .music-btn.playing .music-ring{
-  animation:music-ring 2s ease-out infinite;
+  animation:music-ring 2.4s ease-out infinite;
+}
+.music-btn.playing .music-ring2{
+  animation-delay:.8s;
+}
+.music-btn.playing .music-ring3{
+  animation-delay:1.6s;
 }
 @keyframes music-pulse{
   0%,100%{opacity:1}
-  50%{opacity:.3}
+  50%{opacity:.2}
 }
 @keyframes music-ring{
-  0%{transform:scale(1);opacity:.6}
-  100%{transform:scale(1.8);opacity:0}
+  0%{transform:scale(.8);opacity:.7;border-color:var(--amber)}
+  50%{opacity:.3}
+  100%{transform:scale(2.5);opacity:0;border-color:rgba(232,168,73,.1)}
 }
 
 /* Intro Icon Glow Effect */
@@ -357,7 +368,7 @@ em{font-style:normal;color:var(--amber)}
 }
 
 .intro-icon-wrap{
-  width:80px;height:80px;
+  width:96px;height:96px;
   border-radius:50%;
   border:2px solid var(--amber);
   flex-shrink:0;
@@ -365,7 +376,7 @@ em{font-style:normal;color:var(--amber)}
   overflow:hidden;
 }
 .intro-icon-wrap img{
-  width:64px;height:auto;object-fit:contain;
+  width:78px;height:auto;object-fit:contain;
 }
 
 .intro-body h2{
