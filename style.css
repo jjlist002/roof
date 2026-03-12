@@ -79,6 +79,7 @@ em{font-style:normal;color:var(--amber)}
   transition:background .4s,border .4s;
   border-bottom:1px solid transparent;
 }
+.nav-top{display:contents}
 .nav.scrolled{
   background:rgba(11,11,11,.95);
   border-bottom-color:var(--line);
@@ -943,30 +944,41 @@ em{font-style:normal;color:var(--amber)}
 
 /* ---- 768px ---- */
 @media(max-width:768px){
-  /* Nav */
-  .nav{height:54px;padding:0 20px}
+  /* Nav - 메뉴 바깥 노출 */
+  .nav{height:auto;padding:0;flex-direction:column;align-items:stretch}
   .nav-logo-img{height:56px}
-  .nav-logo-kr{font-size:.92rem}
-  .nav-logo-en{font-size:.5rem;letter-spacing:2px}
 
-  .hamburger{display:flex}
+  .nav-top{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 20px;height:54px;
+  }
+
+  .hamburger{display:none}
 
   .nav-menu{
-    display:none;
-    position:fixed;top:54px;left:0;right:0;bottom:0;
-    background:#0b0b0b;
-    flex-direction:column;align-items:stretch;
-    padding:20px 24px;gap:0;z-index:9999;
+    display:flex;
+    justify-content:center;
+    gap:0;
+    background:rgba(11,11,11,.95);
+    border-top:1px solid var(--line);
+    padding:0;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
   }
-  .nav-menu.open{display:flex}
   .nav-menu a{
-    display:block;padding:17px 0;font-size:1.02rem;color:var(--white);
-    border-bottom:1px solid var(--line);
+    display:block;
+    padding:10px 14px;
+    font-size:.7rem;
+    font-weight:500;
+    color:rgba(255,255,255,.7);
+    white-space:nowrap;
+    letter-spacing:.5px;
+    border-bottom:none;
+    transition:color .3s;
   }
+  .nav-menu a:hover,.nav-menu a:active{color:#fff}
   .nav-menu-phone{
-    display:block;text-align:center;padding:16px;margin-top:16px;
-    background:var(--amber);color:#111 !important;border-radius:3px;
-    font-size:1rem;font-weight:700;border:none;
+    display:none;
   }
 
   /* Hero */
@@ -1041,6 +1053,9 @@ em{font-style:normal;color:var(--amber)}
   .hero-logo-title{font-size:2.1rem;letter-spacing:3px}
   .hero-logo-label{font-size:.6rem;letter-spacing:4px}
   .hero-tagline{font-size:.88rem}
+
+  /* Nav menu compact */
+  .nav-menu a{padding:9px 10px;font-size:.65rem}
 
   /* Products stay 2 col */
   .products-grid{grid-template-columns:repeat(2,1fr)}
