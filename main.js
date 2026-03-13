@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const nav = document.getElementById('nav');
   const floatBtns = document.getElementById('floatBtns');
+  const heroEl = document.getElementById('hero');
+  const heroVideo = document.querySelector('.hero-video');
 
   function onScroll() {
     const y = window.scrollY;
@@ -12,6 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+
+  // Pause video when scrolled past hero (major mobile perf win)
+  const heroObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        heroVideo.play().catch(() => {});
+      } else {
+        heroVideo.pause();
+      }
+    });
+  }, { threshold: 0 });
+  heroObs.observe(heroEl);
 
   // Hamburger
   const hamburger = document.getElementById('hamburger');
@@ -56,24 +70,30 @@ document.addEventListener('DOMContentLoaded', () => {
     heroMusic.play().then(() => {
       musicPlaying = true;
       musicBtn.classList.add('playing');
-      updateFloatMusic();
     }).catch(() => {});
   }
 
-  function updateFloatMusic() {
-    const heroBottom = document.getElementById('hero').getBoundingClientRect().bottom;
-    floatMusic.style.display = (musicPlaying && heroBottom < 0) ? 'flex' : 'none';
-  }
+  // Use IntersectionObserver instead of getBoundingClientRect on scroll
+  const floatMusicObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (musicPlaying) {
+        floatMusic.style.display = e.isIntersecting ? 'none' : 'flex';
+      }
+    });
+  }, { threshold: 0 });
+  floatMusicObs.observe(heroEl);
 
   musicBtn.addEventListener('click', () => {
-    musicPlaying ? stopMusic() : startMusic();
+    if (musicPlaying) {
+      stopMusic();
+    } else {
+      startMusic();
+    }
   });
 
   floatMusic.addEventListener('click', () => {
     stopMusic();
   });
-
-  window.addEventListener('scroll', updateFloatMusic, { passive: true });
 
   // Intro icon glow on click
   const introIcon = document.querySelector('.intro-icon-wrap');
