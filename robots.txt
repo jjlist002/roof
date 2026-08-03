@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://misotechne.co.kr/sitemap.xml
+Sitemap: https://chunilroof.com/sitemap.xml
