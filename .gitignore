@@ -3,3 +3,4 @@ backup.zip
 *.log
 pic/plan.png
 .claude/
+_handoff/
