@@ -103,3 +103,9 @@
 - 로컬 경로 `E:\Firebase_Studio\roof` (Windows 11). 기억 파일은 `~/.claude/projects/E--Firebase-Studio-roof/memory/`에 복원됨
 - git push 인증은 Windows **Git Credential Manager**가 처리함 (`~/.git-credentials` 없음). 만료 시 3.4 절차
 - 도구 확인: node 24, npm 11, sharp(프리빌드 정상), ffmpeg 9. npm 11은 install 스크립트를 기본 차단하지만 sharp는 문제없음
+
+## 9. 현재 상태 (2026-09-23 세션 마무리)
+
+- 당장 해야 할 작업 없음. 사이트는 정상 배포 중이며 몇 달간 변경 없이 운영 중
+- 6절의 "남은 작업"은 **참고 목록**이다. 특히 시공사례 페이지(2026-07 합의)와 Web3Forms 대시보드 설정은 **사용자가 먼저 꺼내기 전에는 권하지 말 것** — 사용자가 "추후 다시 물어보겠다"고 보류함
+- 세션은 사용자가 요청하는 작업부터 시작한다
