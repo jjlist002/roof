@@ -97,3 +97,9 @@
 - `.gitignore`: `node_modules/`, `backup.zip`, `*.log`, `pic/plan.png`, `.claude/`
 - `.claude/settings.local.json`(권한 설정)은 gitignore라 GitHub에 없음 → 이전 패키지 `_handoff/`에 포함되어 있음
 - `pic/blueprint-bg.jpg`는 로컬 수정 상태지만 사이트 미사용 — 그대로 둠
+
+## 8. 로컬 환경 (2026-09-23 이전 완료)
+
+- 로컬 경로 `E:\Firebase_Studio\roof` (Windows 11). 기억 파일은 `~/.claude/projects/E--Firebase-Studio-roof/memory/`에 복원됨
+- git push 인증은 Windows **Git Credential Manager**가 처리함 (`~/.git-credentials` 없음). 만료 시 3.4 절차
+- 도구 확인: node 24, npm 11, sharp(프리빌드 정상), ffmpeg 9. npm 11은 install 스크립트를 기본 차단하지만 sharp는 문제없음
